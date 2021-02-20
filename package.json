@@ -12,8 +12,10 @@
   },
   "scripts": {
     "postinstall": "tsc",
-    "update-langs": "node -r dotenv/config scripts/updateLangs.js",
-    "sync-all": "node -r dotenv/config scripts/sync/syncAll.js"
+    "update-langs": "node scripts/updateLangs.js",
+    "sync-all": "node scripts/sync/syncAll.js",
+    "update-langs:dev": "node -r dotenv/config scripts/updateLangs.js",
+    "sync-all:dev": "node -r dotenv/config scripts/sync/syncAll.js"
   },
   "dependencies": {
     "@octokit/rest": "^18.2.0",
