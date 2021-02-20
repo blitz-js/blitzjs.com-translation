@@ -9,25 +9,25 @@ NOTE TO MAINTAINERS: You may want to translate this guide so that it can be more
 All headings have explicit IDs like this:
 
 ```md
-## Try React {#try-react}
+## Getting Started {#getting-started}
 ```
 
 Do **not** translate these IDs! They are used for navigation and will break if the document is referred to externally, i.e.:
 
 ```md
-See the [beginning section](/getting-started#try-react) for more information.
+See the [beginning section](/feature#getting-started) for more information.
 ```
 
 ✅ DO:
 
 ```md
-## Prueba React {#try-react}
+## Primeros Pasos {#getting-started}
 ```
 
 ❌ DON'T:
 
 ```md
-## Prueba React {#prueba-react}
+## Primeros Pasos {#primeros-pasos}
 ```
 
 This will break the link above.
@@ -39,42 +39,60 @@ Leave text in code blocks untranslated except for comments. You may optionally t
 Example:
 ```js
 // Example
-const element = <h1>Hello, world</h1>;
-ReactDOM.render(element, document.getElementById('root'));
+try {
+  const product = await updateProjectMutation({ name: 'Cool Shoes' })
+  setQueryData(product)
+} catch (error) {
+  alert("Error saving product")
+}
 ```
 
 ✅ DO:
 
 ```js
 // Ejemplo
-const element = <h1>Hello, world</h1>;
-ReactDOM.render(element, document.getElementById('root'));
+try {
+  const product = await updateProductMutation({ name: 'Cool Shoes' })
+  setQueryData(product)
+} catch (error) {
+  alert("Error saving product")
+}
 ```
 
 ✅ ALSO OKAY:
 
 ```js
 // Ejemplo
-const element = <h1>Hola mundo</h1>;
-ReactDOM.render(element, document.getElementById('root'));
+try {
+  const product = await updateProductMutation({ name: 'Zapatazos' })
+  setQueryData(product)
+} catch (error) {
+  alert("rror al guardar el producto")
+}
 ```
 
 ❌ DON'T:
 
 ```js
 // Ejemplo
-const element = <h1>Hola mundo</h1>;
-// "root" refers to an element ID.
-// DO NOT TRANSLATE
-ReactDOM.render(element, document.getElementById('raíz'));
+try {
+  const producto = await updateProductoMutation({ name: 'Zapatazos' })
+  setQueryData(producto)
+} catch (error) {
+  alert("rror al guardar el producto")
+}
 ```
 
 ❌ DEFINITELY DON'T:
 
 ```js
 // Ejemplo
-const elemento = <h1>Hola mundo</h1>;
-ReactDOM.hacer(elemento, documento.obtenerElementoPorId('raíz'));
+try {
+  const producto = await mutacionActualizarProducto({ nombre: 'Zapatazos' })
+  actualizarDatosDeLaPeticion(product)
+} catch (error) {
+  alerta("Error al guardar el producto")
+}
 ```
 
 ## External Links
@@ -87,13 +105,13 @@ If an external link is to an article in a reference like [MDN] or [Wikipedia], a
 Example:
 
 ```md
-React elements are [immutable](https://en.wikipedia.org/wiki/Immutable_object).
+Some elements are [immutable](https://en.wikipedia.org/wiki/Immutable_object).
 ```
 
 ✅ OK:
 
 ```md
-Los elementos de React son [inmutables](https://es.wikipedia.org/wiki/Objeto_inmutable).
+Algunos elementos son [inmutables](https://es.wikipedia.org/wiki/Objeto_inmutable).
 ```
 
 For links that have no equivalent (Stack Overflow, YouTube videos, etc.), just use the English link.

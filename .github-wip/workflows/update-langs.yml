@@ -1,0 +1,22 @@
+name: Update languages
+
+on:
+  push:
+    paths:
+      - "langs/**"
+
+jobs:
+  update-langs:
+    name: Update all languages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Get langs diff
+        uses: technote-space/get-diff-action@v4
+        with:
+          PATTERNS: |
+            langs/*.json
+      - name: Install dependencies
+        run: yarn
+      - name: Run script
+        run: yarn update-langs ${{ env.MATCHED_FILES }}

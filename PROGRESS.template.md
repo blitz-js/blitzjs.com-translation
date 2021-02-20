@@ -10,7 +10,7 @@ To translate a page:
 2. Comment below with the name of the page you would like to translate. **Please take only one page at a time**.
 3. Clone this repo, translate your page, and submit a pull request!
 
-Before contributing, read the glossary and style guide (once they exist) to understand how to translate various technical and React-specific terms.
+Before contributing, read the glossary and style guide (once they exist) to understand how to translate various technical and Blitz-specific terms.
 
 Please be prompt with your translations! If you find that you can't commit anymore, let the maintainers know so they can assign the page to someone else.
 
@@ -18,7 +18,7 @@ Please be prompt with your translations! If you find that you can't commit anymo
 
 When someone volunteers, edit this issue with the username of the volunteer, and with the PR. Ex:
 
-* [ ] Home Page (@tesseralis) #1
+* [ ] Home Page (@juanm04) #1
 
 When PRs are merged, make sure to mark that page as completed!
 
@@ -27,139 +27,144 @@ When PRs are merged, make sure to mark that page as completed!
 To do before releasing as an "official" translation. **Please translate these pages first.**
 
 * [ ] Home Page
+* [ ] Get Started
 * [ ] Tutorial
+* [ ] All other texts (footer, navbar, search popup, etc.)
+
+### Introduction
+
+* [ ] What is Next.js?
+* [ ] Why Blitz instead of Next.js?
+* [ ] Tradeoffs
+* [ ] Free Stickers
 
 ### Basics
 
-* [ ] Hello World
-* [ ] Introducing JSX
-* [ ] Rendering Elements
-* [ ] Components and Props
-* [ ] State and Lifecycle
-* [ ] Handling Events
-* [ ] Conditional Rendering
-* [ ] Lists and Keys
-* [ ] Forms
-* [ ] Lifting State Up
-* [ ] Composition vs Inheritance
-* [ ] Thinking in React
+* [ ] File Structure
+* [ ] `<App>`
+* [ ] Built-In CSS Support
+* [ ] Image Optimization
+* [ ] Static Files & Images
+* [ ] Environment Variables
+* [ ] Error Handling
+* [ ] Testing
 
-### API Reference
+### Pages
 
-* [ ] React
-* [ ] React.Component
-* [ ] ReactDOM
-* [ ] ReactDOMServer
-* [ ] DOM Elements
-* [ ] SyntheticEvent
-* [ ] Test Utilities
-* [ ] Shallow Renderer
-* [ ] Test Renderer
-* [ ] JS Environment Requirements
-* [ ] Glossary
+* [ ] Pages
+* [ ] Redirects
+* [ ] Error Pages
+* [ ] `<Head>`
+* [ ] `<Document>`
+* [ ] Preview Mode
+* [ ] Code Splitting
+* [ ] `getStaticProps` API
+* [ ] `getStaticPaths` API
+* [ ] `getServerSideProps` API
 
-### Navigation
+### Routing
 
-These are the navigation links that appear in the sidebar. Possibly wait until
-the corresponding sections are translated to do these.
-
-* [ ] tutorial/nav.yml
-* [ ] docs/nav.yml
+* [ ] File-Based Routing
+* [ ] Conventions
+* [ ] Internationalized Routing
+* [ ] `<Link>`
+* [ ] URL Params & Query
+* [ ] Router
+* [ ] API Routes
 
 ## Next Steps
 
 These are the next most important translations, ordered by importance:
 
-### Installation
+### Database
 
-* [ ] Getting Started
-* [ ] Add React to a Website
-* [ ] Create a New React App
-* [ ] CDN Links
+* [ ] Overview
+* [ ] Run Postgres Locally
+* [ ] Seeds
+* [ ] Prisma Utilities
+* [ ] Fauna
 
-### Hooks
+### Queries & Mutations
 
-Everyone is hooked on hooks! People are really excited about these and it would be great for them to be translated.
+* [ ] Query Resolvers
+* [ ] Use Queries
+* [ ] Mutation Resolvers
+* [ ] Use Mutations
+* [ ] In a React Component
+* [ ] Error Handling
+* [ ] Cache Invalidation
+* [ ] Optimistic Updates
+* [ ] Client Utilities
+* [ ] Server Utilities
+* [ ] `useQuery`
+* [ ] `usePaginatedQuery`
+* [ ] `useInfiniteQuery`
+* [ ] `useMutation`
 
-  * [ ] Introducing Hooks
-  * [ ] Hooks at a Glance
-  * [ ] Using the State Hook
-  * [ ] Using the Effect Hook
-  * [ ] Rules of Hooks
-  * [ ] Building Your Own Hooks
-  * [ ] Hooks API Reference
-  * [ ] Hooks FAQ
+### Auth
 
-### Warnings
+* [ ] Overview
+* [ ] Session Management
+* [ ] Authorization & Security
+* [ ] Hooks & Utilities
+* [ ] Third Party Login w/Passport.js
 
-These are the pages that you get when you click the links in the console (e.g. https://reactjs.org/warnings/dont-call-proptypes.html). People tend to search these, so **please don't translate the error message itself**.
- 
-* [ ] dont-call-proptypes
-* [ ] invalid-aria-prop
-* [ ] invalid-hook-call-warning
-* [ ] legacy-factories
-* [ ] refs-must-have-owner
-* [ ] special-props
-* [ ] unknown-prop
+### Backend Architecture
 
-### Advanced Guides
+* [ ] Background Processing with Quirrel
+* [ ] HTTP Middleware
+* [ ] Custom Server
 
-* [ ] Accessibility
-* [ ] Code-Splitting
-* [ ] Context
-* [ ] Error Boundaries
-* [ ] Forwarding Refs
-* [ ] Fragments
-* [ ] Higher-Order Components
-* [ ] Integrating with Other Libraries
-* [ ] JSX In Depth
-* [ ] Optimizing Performance
-* [ ] Portals
-* [ ] React Without ES6
-* [ ] React Without JSX
-* [ ] Reconciliation
-* [ ] Refs and the DOM
-* [ ] Render Props
-* [ ] Static Type Checking
-* [ ] Strict Mode
-* [ ] Typechecking With PropTypes
-* [ ] Uncontrolled Components
-* [ ] Web Components
+### Deploying to Production
 
-### FAQ
+* [ ] To Render.com
+* [ ] To Vercel
+* [ ] To Heroku
 
-* [ ] APIs and AJAX
-* [ ] Babel, JSX, and Build Steps
-* [ ] Passing Functions to Components
-* [ ] Component State
-* [ ] Styling and CSS
-* [ ] File Structure
-* [ ] Versioning Policy
-* [ ] Virtual DOM and Internals
+### Community
 
-### Contributing
-
-Priority: Low
-
+* [ ] How the Community Operates
+* [ ] Manifesto
+* [ ] History
 * [ ] How to Contribute
-* [ ] Codebase Overview
-* [ ] Implementation Notes
-* [ ] Design Principles
+* [ ] Being a Maintainer
+* [ ] Code of Conduct
 
-### Components
+### Configuration
 
-Components in `src/components` that have some text in them.
+* [ ] `blitz.config.js`
+* [ ] Webpack Config
+* [ ] PostCSS Config
+* [ ] RPC Specification
+* [ ] Measuring Performance
 
-* [ ] CodeEditor
-* [ ] CodeExample
-* [ ] ErrorDecoder
-* [ ] LayoutFooter
-* [ ] LayoutHeader
-* [ ] MarkdownPage
+### CLI
 
-## Additional Translations
+* [ ] Overview
+* [ ] `blitz new`
+* [ ] `blitz dev`
+* [ ] `blitz start`
+* [ ] `blitz build`
+* [ ] `blitz db`
+* [ ] `blitz prisma`
+* [ ] `blitz generate`
+* [ ] `blitz console`
+* [ ] `blitz install`
+* [ ] `blitz autocomplete`
+* [ ] `blitz routes`
+
+### Recipes
+
+* [ ] Using Recipes
+* [ ] Writing Recipes
+
+### Templates
+
+* [ ] Blitz Templates
+
+<!-- ## Additional Translations
 
 These are not the primary translation targets.
 
 * [ ] Blog
-* [ ] Community
+* [ ] Community -->

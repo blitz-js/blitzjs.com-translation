@@ -1,6 +1,6 @@
-# reactjs.org Translation
+# blitzjs.com Translation
 
-This repo contains resources and scripts to enable translations of https://reactjs.org.
+This repo contains resources and scripts to enable translations of https://blitzjs.com.
 
 ## Contributing to translations
 
@@ -19,9 +19,9 @@ For example:
 
 ```json
 {
-  "name": "English",
-  "code": "en",
-  "maintainers": ["gaearon", "tesseralis"]
+  "name": "Spanish",
+  "code": "es",
+  "maintainers": ["juanm04", "ntgussoni"]
 }
 ```
 
@@ -31,11 +31,9 @@ Also, please read the [Maintainer Responsibilities](/maintainer-guide.md#maintai
 
 Once the PR is accepted, the bot will:
 
-* Create a new repository for you at `reactjs/{lang-code}.reactjs.org`
-* Add/invite all maintainers listed to a "reactjs.org {language} Translation" team in the reactjs organization
+* Create a new repository for you at `blitz-js/{lang-code}.blitzjs.com`
+* Add/invite all maintainers listed to the repository
 * Create an issue from [PROGRESS.template.md](/PROGRESS.template.md) in the new repository to track your translation progress
-
-If you are not a member of the reactjs organization, you should receive an email invite to join. Please accept this invite so you can get admin access to your repository!
 
 You may want to [pin](https://help.github.com/articles/pinning-an-issue-to-your-repository/) the generated issue to make it easier to find.
 
@@ -52,10 +50,10 @@ If you are interested in becoming a maintainer for a translation, please ask one
 ## Before publishing
 
 1. Review your translations and make sure that the pages listed in "Core Pages" are fully translated. Run the site yourself locally to make sure there are no bugs or missing translations.
-2. ask {TBD} to add {lang-code}.reactjs.org as a subdomain.
-3. submit a PR to [reactjs/reactjs.org](https://github.com/reactjs/reactjs.org) adding the language in the dropdown (once we make it).
+2. ask {TBD} to add {lang-code}.blitzjs.com as a subdomain.
+3. submit a PR to [blitz-js/blitzjs.com](https://github.com/blitz-js/blitzjs.com) adding the language in the dropdown and the welcome message.
 4. Celebrate! 🎉🌐
 
 ## Acknowledgements
 
-This repo, and the bot that makes all this possible, is based off of and iterated upon [che-tsumi](https://github.com/vuejs-jp/che-tsumi/tree/master/lib) by the [Vue.js Japan User Group](https://github.com/vuejs-jp).
+This repo, and the bot that makes all this possible, is based off of and iterated upon [reactjs.org-translation](https://github.com/reactjs.org/reactjs.org-translation).

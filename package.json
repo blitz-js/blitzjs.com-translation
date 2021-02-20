@@ -1,27 +1,34 @@
 {
-  "name": "reactjs.org-translations",
+  "name": "blitzjs.com-translation",
   "version": "0.0.1",
-  "description": "Scripts and files useful for reactjs.org translators",
+  "description": "Scripts and files useful for blitzjs.com translators",
   "license": "MIT",
-  "scripts": {
-    "rotom": "env-cmd ./.env node scripts/rotom.js",
-    "run-all": "env-cmd ./.env node scripts/runAll.js",
-    "watch": "env-cmd ./.env node scripts/watch.js"
-  },
-  "dependencies": {
-    "@octokit/rest": "^16.15.0",
-    "bluebird": "^3.5.3",
-    "commander": "^2.19.0",
-    "cron": "^1.6.0",
-    "env-cmd": "^6.0.0",
-    "log4js": "^4.0.2",
-    "shelljs": "^0.7.8"
-  },
-  "engines": {
-    "node.js": "11.9.0"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/reactjs/reactjs.org-translation.git"
+    "url": "https://github.com/blitz-js/blitzjs.com-translation.git"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "postinstall": "tsc",
+    "update-langs": "node -r dotenv/config scripts/updateLangs.js",
+    "sync-all": "node -r dotenv/config scripts/sync/syncAll.js"
+  },
+  "dependencies": {
+    "@octokit/rest": "^18.2.0",
+    "bluebird": "^3.7.2",
+    "date-fns": "^2.17.0",
+    "dotenv": "^8.2.0",
+    "log4js": "^6.3.0",
+    "shelljs": "^0.8.4",
+    "zod": "^3.0.0-alpha.4"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.33",
+    "@types/node": "^14.14.31",
+    "@types/shelljs": "^0.8.8",
+    "@vercel/node": "^1.9.0",
+    "typescript": "^4.1.5"
   }
 }

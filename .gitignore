@@ -6,3 +6,7 @@ repo/*
 npm-debug.log
 yarn-error.log
 !.gitkeep
+
+scripts/**/*.js
+repos/
+repo/
