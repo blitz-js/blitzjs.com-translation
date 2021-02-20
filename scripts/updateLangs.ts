@@ -64,7 +64,7 @@ async function main() {
           (username) => !originalMaintainersNames.includes(username),
         )
         const removedMaintainers = originalMaintainersNames.filter(
-          (username) => !maintainersNames.includes(username),
+          (username) => !maintainersNames.includes(username) && username !== process.env.USER_NAME,
         )
 
         if (newMaintainers.length > 0) {
