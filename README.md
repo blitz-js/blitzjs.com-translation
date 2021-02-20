@@ -27,17 +27,17 @@ For example:
 
 In the PR comment, please describe your experiences with translation (e.g. links to previous work). We prefer more than one maintainer on each repo, so if you're by yourself, we'll leave the PR open for others to join in. If you are a group, please have at least one person other than the PR opener comment, to make sure all people listed actually want to be part of the translation!
 
-Also, please read the [Maintainer Responsibilities](/maintainer-guide.md#maintainer-responsibilities) and make sure that you are comfortable with the responsibilities listed.
+Also, please read the [Maintainer Responsibilities](/docs/maintainer-guide.md#maintainer-responsibilities) and make sure that you are comfortable with the responsibilities listed.
 
 Once the PR is accepted, the bot will:
 
 * Create a new repository for you at `blitz-js/{lang-code}.blitzjs.com`
 * Add/invite all maintainers listed to the repository
-* Create an issue from [PROGRESS.template.md](/PROGRESS.template.md) in the new repository to track your translation progress
+* Create an issue from [PROGRESS.template.md](/docs/PROGRESS.template.md) in the new repository to track your translation progress
 
 You may want to [pin](https://help.github.com/articles/pinning-an-issue-to-your-repository/) the generated issue to make it easier to find.
 
-See [Maintainer Tips](/maintainer-guide.md/#tips) for additional advice on how to manage your repository.
+See [Maintainer Tips](/docs/maintainer-guide.md/#tips) for additional advice on how to manage your repository.
 
 Happy translating!
 
