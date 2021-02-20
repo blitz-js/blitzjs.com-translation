@@ -3,10 +3,7 @@ import * as z from "zod"
 import {Octokit} from "@octokit/rest"
 
 export const CONFIG = {
-  // owner: "blitz-js",
-  // repository: "blitzjs.com",
-  // teamSlug: "blitzjs-com",
-  org: "blitz-i18n-test-org",
+  org: "blitz-js",
   mainRepo: "blitzjs.com",
   defaultBranch: "main",
   concurrency: 3,
@@ -23,8 +20,8 @@ export const getJSON = async (file: string) =>
   JSON.parse(await fs.readFile(file, {encoding: "utf-8"}))
 
 export const octokit = new Octokit({
-  auth: `token ${process.env.GITHUB_ACCESS_TOKEN}`,
+  auth: `token ${process.env.PERSONAL_ACCESS_TOKEN}`,
 })
 
 export const getGitHubRepo = (owner: string, repo: string) =>
-  `https://${process.env.USER_NAME}:${process.env.GITHUB_ACCESS_TOKEN}@github.com/${owner}/${repo}.git`
+  `https://${process.env.USER_NAME}:${process.env.PERSONAL_ACCESS_TOKEN}@github.com/${owner}/${repo}.git`
