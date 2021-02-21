@@ -2,9 +2,16 @@
 
 This repo contains resources and scripts to enable translations of https://blitzjs.com.
 
+## How it works
+
+- The english repo is our source of truth: https://github.com/blitz-js/blitzjs.com
+- Each translation get's it's own repo and subdomain like: https://github.com/blitz-js/es.blitzjs.com
+- On a periodic schedule (currently every Monday), a bot will open a PR to each translation repo with the changes from the main english repo. The maintainers of the translation will then make any further translations if needed before merging that PR.
+
+
 ## Contributing to translations
 
-Check the `langs` folder if your language is being translated. If there is, add yourself to the maintainers list by opening a PR. If there isn't, start a new translation:
+Check the https://github.com/blitz-js repos to see if there is a [lang-code].blitzjs.com repo for your language. If there is, open issue #1 in that repo which will be titled "Translation Progress". That issue tracks the translation process and has instructions on how to help.
 
 ## Starting a new translation
 
@@ -50,8 +57,8 @@ If you are interested in becoming a maintainer for a translation, please ask one
 ## Before publishing
 
 1. Review your translations and make sure that the pages listed in "Core Pages" are fully translated. Run the site yourself locally to make sure there are no bugs or missing translations.
-2. ask {TBD} to add {lang-code}.blitzjs.com as a subdomain.
-3. submit a PR to [blitz-js/blitzjs.com](https://github.com/blitz-js/blitzjs.com) adding the language in the dropdown and the welcome message.
+2. Ask @flybayer to add {lang-code}.blitzjs.com as a subdomain.
+3. Submit a PR to [blitz-js/blitzjs.com](https://github.com/blitz-js/blitzjs.com) adding the language in the dropdown and the welcome message.
 4. Celebrate! 🎉🌐
 
 ## Acknowledgements
