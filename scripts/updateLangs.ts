@@ -46,8 +46,6 @@ async function main() {
     try {
       const newRepoName = `${langCode}.${mainRepo}`
 
-      console.log(process.env.PERSONAL_ACCESS_TOKEN?.length)
-
       if (await doesRepoExists(newRepoName)) {
         // Update maintainers
 
