@@ -4,7 +4,7 @@ This repo contains resources and scripts to enable translations of https://blitz
 
 ## Contributing to translations
 
-Check www.isreacttranslatedyet.com to see if your language already has a translation effort in progress. Click on "Track Progress" on the language you want to contribute to in order to receive further instructions.
+Check the https://github.com/blitz-js repos to see if there is a [CODE].blitzjs.com repo for your language. If there is, open issue #1 in that repo which will be titled "Translation Progress". That issue tracks the translation process and has instructions on how to help.
 
 ## Starting a new translation
 
@@ -50,8 +50,8 @@ If you are interested in becoming a maintainer for a translation, please ask one
 ## Before publishing
 
 1. Review your translations and make sure that the pages listed in "Core Pages" are fully translated. Run the site yourself locally to make sure there are no bugs or missing translations.
-2. ask {TBD} to add {lang-code}.blitzjs.com as a subdomain.
-3. submit a PR to [blitz-js/blitzjs.com](https://github.com/blitz-js/blitzjs.com) adding the language in the dropdown and the welcome message.
+2. Ask @flybayer to add {lang-code}.blitzjs.com as a subdomain.
+3. Submit a PR to [blitz-js/blitzjs.com](https://github.com/blitz-js/blitzjs.com) adding the language in the dropdown and the welcome message.
 4. Celebrate! 🎉🌐
 
 ## Acknowledgements
