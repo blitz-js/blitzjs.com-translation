@@ -2,6 +2,13 @@
 
 This repo contains resources and scripts to enable translations of https://blitzjs.com.
 
+## How it works
+
+- The english repo is our source of truth: https://github.com/blitz-js/blitzjs.com
+- Each translation get's it's own repo and subdomain like: https://github.com/blitz-js/es.blitzjs.com
+- On a periodic schedule (currently every Monday), a bot will open a PR to each translation repo with the changes from the main english repo. The maintainers of the translation will then make any further translations if needed before merging that PR.
+
+
 ## Contributing to translations
 
 Check the https://github.com/blitz-js repos to see if there is a [lang-code].blitzjs.com repo for your language. If there is, open issue #1 in that repo which will be titled "Translation Progress". That issue tracks the translation process and has instructions on how to help.
