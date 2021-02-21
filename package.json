@@ -12,7 +12,7 @@
   },
   "scripts": {
     "postinstall": "tsc",
-    "update-langs": "PEPE=owo node -r dotenv/config scripts/updateLangs.js",
+    "update-langs": "node -r dotenv/config scripts/updateLangs.js",
     "sync-all": "node -r dotenv/config scripts/sync/syncAll.js"
   },
   "dependencies": {

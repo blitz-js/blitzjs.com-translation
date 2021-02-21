@@ -4,7 +4,7 @@ This repo contains resources and scripts to enable translations of https://blitz
 
 ## Contributing to translations
 
-Check www.isreacttranslatedyet.com to see if your language already has a translation effort in progress. Click on "Track Progress" on the language you want to contribute to in order to receive further instructions.
+Check the `langs` folder if your language is being translated. If there is, add yourself to the maintainers list by opening a PR. If there isn't, start a new translation:
 
 ## Starting a new translation
 

@@ -20,10 +20,12 @@ async function main() {
     throw new Error("Language config files not provided")
   }
   const langs = await Promise.all(
-    langFiles.map(async (file) => {
-      const data = await getJSON(file)
-      return LangSchema.parse(data)
-    }),
+    langFiles
+      .filter((file) => file.endsWith(".json"))
+      .map(async (file) => {
+        const data = await getJSON(file)
+        return LangSchema.parse(data)
+      }),
   )
   const {org, mainRepo, defaultBranch} = CONFIG
 
