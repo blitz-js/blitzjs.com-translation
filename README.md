@@ -4,7 +4,7 @@ This repo contains resources and scripts to enable translations of https://blitz
 
 ## Contributing to translations
 
-Check the https://github.com/blitz-js repos to see if there is a [CODE].blitzjs.com repo for your language. If there is, open issue #1 in that repo which will be titled "Translation Progress". That issue tracks the translation process and has instructions on how to help.
+Check the https://github.com/blitz-js repos to see if there is a [lang-code].blitzjs.com repo for your language. If there is, open issue #1 in that repo which will be titled "Translation Progress". That issue tracks the translation process and has instructions on how to help.
 
 ## Starting a new translation
 
