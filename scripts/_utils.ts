@@ -13,6 +13,10 @@ export const LangSchema = z.object({
   name: z.string(),
   code: z.string(),
   maintainers: z.string().array().nonempty(),
+  branchProtection: z
+    .boolean()
+    .optional()
+    .transform((protection) => (protection === false ? false : true)),
 })
 export type LangType = z.infer<typeof LangSchema>
 

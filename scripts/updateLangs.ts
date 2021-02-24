@@ -14,6 +14,35 @@ import * as log4js from "log4js"
 import {CONFIG, LangSchema, getGitHubRepo, getJSON, octokit} from "./_utils"
 // shell.config.silent = true;
 
+const branchIsProtected = async (owner: string, repo: string, branch: string) => {
+  const {data} = await octokit.repos.getBranchProtection({owner, repo, branch})
+  return data.required_pull_request_reviews?.require_code_owner_reviews !== undefined
+}
+
+const activateBranchProtection = (owner: string, repo: string, branch: string) =>
+  octokit.repos.updateBranchProtection({
+    owner,
+    repo,
+    branch,
+    required_pull_request_reviews: {
+      required_approving_review_count: 1,
+      dismiss_stale_reviews: true,
+    },
+    allow_force_pushes: false,
+    restrictions: null,
+    enforce_admins: null,
+    required_status_checks: null,
+  })
+
+const doesRepoExists = async (owner: string, repo: string) => {
+  try {
+    await octokit.repos.get({owner, repo})
+    return true
+  } catch (error) {
+    return false
+  }
+}
+
 async function main() {
   const langFiles = process.argv.slice(2)
   if (langFiles.length === 0) {
@@ -29,26 +58,14 @@ async function main() {
   )
   const {org, mainRepo, defaultBranch} = CONFIG
 
-  const doesRepoExists = async (repo: string) => {
-    try {
-      await octokit.repos.get({
-        owner: org,
-        repo,
-      })
-      return true
-    } catch (error) {
-      return false
-    }
-  }
-
-  for await (const {code: langCode, name: langName, maintainers} of langs) {
+  for await (const {code: langCode, name: langName, maintainers, branchProtection} of langs) {
     const logger = log4js.getLogger(langCode)
     logger.level = "info"
 
     try {
       const newRepoName = `${langCode}.${mainRepo}`
 
-      if (await doesRepoExists(newRepoName)) {
+      if (await doesRepoExists(org, newRepoName)) {
         // Update maintainers
 
         const {data: originalMaintainers} = await octokit.repos.listCollaborators({
@@ -95,10 +112,26 @@ async function main() {
             ),
           )
         }
+
+        if (await branchIsProtected(org, newRepoName, defaultBranch)) {
+          if (!branchProtection) {
+            logger.info("Removing branch protection...")
+            await octokit.repos.deleteBranchProtection({
+              owner: org,
+              repo: newRepoName,
+              branch: defaultBranch,
+            })
+          }
+        } else {
+          if (branchProtection) {
+            logger.info("Adding branch protection...")
+            await activateBranchProtection(org, newRepoName, defaultBranch)
+          }
+        }
       } else {
         // Create repo!!
 
-        logger.debug("Creating new repo in GitHub...")
+        logger.info("Creating new repo in GitHub...")
         await octokit.repos.createInOrg({
           org,
           name: newRepoName,
@@ -135,19 +168,10 @@ async function main() {
         shell.exec(`git remote add duplicated-repo ${getGitHubRepo(org, newRepoName)}`)
         shell.exec(`git push -u duplicated-repo ${defaultBranch}`)
 
-        await octokit.repos.updateBranchProtection({
-          owner: org,
-          repo: newRepoName,
-          branch: defaultBranch,
-          required_pull_request_reviews: {
-            required_approving_review_count: 1,
-            dismiss_stale_reviews: true,
-          },
-          allow_force_pushes: false,
-          restrictions: null,
-          enforce_admins: null,
-          required_status_checks: null,
-        })
+        if (branchProtection) {
+          logger.info("Adding branch protection...")
+          await activateBranchProtection(org, newRepoName, defaultBranch)
+        }
       }
 
       logger.info("Finished!")
