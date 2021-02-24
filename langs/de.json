@@ -1,5 +1,6 @@
 {
   "name": "German",
   "code": "de",
-  "maintainers": ["engelkes-finstreet"]
+  "maintainers": ["engelkes-finstreet"],
+  "branchProtection": false
 }
