@@ -31,7 +31,7 @@ For example:
 }
 ```
 
-We prefer more than one maintainer on each repo, so if you're by yourself, we'll leave the PR open for others to join in. If you are a group, please have at least one person other than the PR opener comment, to make sure all people listed actually want to be part of the translation!
+We prefer more than one maintainer on each repo, so if you're by yourself, we'll leave the PR open for others to join in. If you are a group, please have at least one person other than the PR opener comment, to make sure all people listed actually want to be part of the translation! If after some time, nobody else joins to your group, we'll set `branchProtection` to `false` so you can do the translation on your own.
 
 Also, please read the [Maintainer Responsibilities](/docs/maintainer-guide.md#maintainer-responsibilities) and make sure that you are comfortable with the responsibilities listed.
 
