@@ -1,6 +1,6 @@
 {
   "name": "German",
   "code": "de",
-  "maintainers": ["engelkes-finstreet"],
+  "maintainers": ["engelkes-finstreet", "alexomanie"],
   "branchProtection": false
 }
