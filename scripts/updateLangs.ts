@@ -134,6 +134,20 @@ async function main() {
         shell.cd("repo")
         shell.exec(`git remote add duplicated-repo ${getGitHubRepo(org, newRepoName)}`)
         shell.exec(`git push -u duplicated-repo ${defaultBranch}`)
+
+        await octokit.repos.updateBranchProtection({
+          owner: org,
+          repo: newRepoName,
+          branch: defaultBranch,
+          required_pull_request_reviews: {
+            required_approving_review_count: 1,
+            dismiss_stale_reviews: true,
+          },
+          allow_force_pushes: false,
+          restrictions: null,
+          enforce_admins: null,
+          required_status_checks: null,
+        })
       }
 
       logger.info("Finished!")
