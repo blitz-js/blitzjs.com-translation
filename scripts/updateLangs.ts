@@ -15,8 +15,12 @@ import {CONFIG, LangSchema, getGitHubRepo, getJSON, octokit} from "./_utils"
 // shell.config.silent = true;
 
 const branchIsProtected = async (owner: string, repo: string, branch: string) => {
-  const {data} = await octokit.repos.getBranchProtection({owner, repo, branch})
-  return data.required_pull_request_reviews?.require_code_owner_reviews !== undefined
+  try {
+    const {data} = await octokit.repos.getBranchProtection({owner, repo, branch})
+    return data.required_pull_request_reviews?.require_code_owner_reviews !== undefined
+  } catch (error) {
+    return false
+  }
 }
 
 const activateBranchProtection = (owner: string, repo: string, branch: string) =>
