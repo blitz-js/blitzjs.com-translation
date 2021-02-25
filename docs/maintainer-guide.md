@@ -26,7 +26,7 @@ Also, create a *style guide* to define additional rules to follow in translation
 
 ### Collaborate on difficult pages
 
-Some pages (like the [tutorial](https://blitjs.com/tutorial)) are *very* long. Instead of assigning a long page to one translator, you can create a "Work In Progress" (WIP) branch and assign different sections to different translators.
+Some pages (like the [tutorial](https://blitzjs.com/docs/tutorial)) are *very* long. Instead of assigning a long page to one translator, you can create a "Work In Progress" (WIP) branch and assign different sections to different translators.
 
 ### Setup a review process
 
