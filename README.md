@@ -62,4 +62,4 @@ If you are interested in becoming a maintainer for a translation, please ask one
 
 ## Acknowledgements
 
-This repo, and the bot that makes all this possible, is based off of and iterated upon [reactjs.org-translation](https://github.com/reactjs.org/reactjs.org-translation).
+This repo, and the bot that makes all this possible, is based off of and iterated upon [reactjs.org-translation](https://github.com/reactjs/reactjs.org-translation).
