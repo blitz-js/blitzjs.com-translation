@@ -158,7 +158,7 @@ async function main() {
         logger.info("Creating Progress Issue...")
         const rawBody = await fs.readFile("./docs/PROGRESS.template.md", {encoding: "utf-8"})
         const maintainerList = maintainers.map((name) => `* @${name}`).join("\n")
-        const body = rawBody.replace("{MAINTAINERS}\n", maintainerList)
+        const body = rawBody.replace("{MAINTAINERS}", maintainerList)
         await octokit.issues.create({
           owner: org,
           repo: newRepoName,
