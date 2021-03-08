@@ -49,7 +49,7 @@ export default async function syncOne({code: langCode, maintainers}: LangType) {
       shell.exec(`git checkout -b ${syncBranch}`)
     }
 
-    // Pull from {source}/master
+    // Pull from {source}/{defaultBranch}
     const output = shell.exec(`git pull mainRepo ${defaultBranch}`).stdout
     if (output.includes("Already up to date.")) {
       logger.info(`We are already up to date with ${transRepoName}.`)
@@ -63,9 +63,9 @@ export default async function syncOne({code: langCode, maintainers}: LangType) {
 
     shell.exec(`git commit -am "merging all conflicts"`)
 
-    // If no conflicts, merge directly into master
+    // If no conflicts, merge directly into {defaultBranch}
     if (conflictFiles.length === 0) {
-      logger.info("No conflicts found. Committing directly to master.")
+      logger.info(`No conflicts found. Committing directly to ${defaultBranch}.`)
       shell.exec(`git checkout ${defaultBranch}`)
       shell.exec(`git merge ${syncBranch}`)
       shell.exec(`git push origin ${defaultBranch}`)
@@ -80,18 +80,20 @@ export default async function syncOne({code: langCode, maintainers}: LangType) {
     const title = `Sync with main repo @ ${shortHash}`
     const body = [
       "This PR was automatically generated.",
-      `Merge changes from [${mainRepo}](https://github.com/${org}/${mainRepo}/commits/master) at ${shortHash}`,
+      `Merge changes from [${mainRepo}](https://github.com/${org}/${mainRepo}/commits/${defaultBranch}) at ${shortHash}`,
       conflictFiles.length === 0
         ? "No conflicts were found."
         : [
             "The following files have conflicts and may need new translations:",
             conflictFiles
-              .map((file) => ` * [ ] [${file}](/${org}/${mainRepo}/commits/master/${file})`)
+              .map(
+                (file) => ` * [ ] [${file}](/${org}/${mainRepo}/commits/${defaultBranch}/${file})`,
+              )
               .join("\n"),
             "Please fix the conflicts by pushing new commits to this pull request, either by editing the files directly on GitHub or by checking out this branch.",
           ].join("\n\n"),
       "## DO NOT SQUASH MERGE THIS PULL REQUEST!",
-      'Doing so will "erase" the commits from master and cause them to show up as conflicts the next time we merge.',
+      `Doing so will "erase" the commits from ${defaultBranch} and cause them to show up as conflicts the next time we merge.`,
     ].join("\n\n")
 
     const {data: newPR} = await octokit.pulls.create({
