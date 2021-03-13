@@ -1,11 +1,13 @@
 .DS_Store
-.idea
+
 .env
-node_modules/
-repo/*
-npm-debug.log
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
 yarn-error.log
-!.gitkeep
 
 scripts/**/*.js
 repos/
