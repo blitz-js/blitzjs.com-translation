@@ -1,6 +1,7 @@
 import * as log4js from "log4js"
+import fs from "fs/promises"
 import * as shell from "shelljs"
-import {CONFIG, getGitHubRepo, LangType, octokit} from "../_utils"
+import {CONFIG, getGitHubRepo, LangSchema, octokit} from "../_utils"
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#Getting_a_random_integer_between_two_values
 function getRandomInt(min: number, max: number) {
@@ -22,14 +23,26 @@ function getRandomSubset(array: any[], n: number) {
   return result
 }
 
-export default async function syncOne({code: langCode, maintainers}: LangType) {
-  const logger = log4js.getLogger(langCode)
+async function main() {
+  const langFile = process.argv[2]
+  if (typeof langFile !== "string") {
+    console.error("Missing langFile: node syncOne [langFile]")
+    process.exit(1)
+  }
+
+  const logger = log4js.getLogger(langFile)
   logger.level = "info"
 
   try {
+    const rawLang = await fs.readFile(`langs/${langFile}`, {encoding: "utf-8"})
+    const {code: langCode, maintainers} = LangSchema.parse(JSON.parse(rawLang))
+
     const {org, mainRepo, defaultBranch} = CONFIG
 
     const transRepoName = `${langCode}.${mainRepo}`
+
+    shell.mkdir("-p", "repos")
+    shell.cd("repos")
 
     shell.exec(`git clone ${getGitHubRepo(org, transRepoName)}`)
     shell.cd(transRepoName)
@@ -117,3 +130,5 @@ export default async function syncOne({code: langCode, maintainers}: LangType) {
     logger.error(error)
   }
 }
+
+main()

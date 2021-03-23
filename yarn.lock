@@ -184,10 +184,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^14.14.34":
-  version: 14.14.34
-  resolution: "@types/node@npm:14.14.34"
-  checksum: 74db0d80ad997c3ca2597abe1c63c85e87c32e06b4e8c8392a24a11ad00a4567b293a72bbdf49ace201150b420a943609181771cab034cef10fe65272d452718
+"@types/node@npm:^14.14.35":
+  version: 14.14.35
+  resolution: "@types/node@npm:14.14.35"
+  checksum: 0f6320bf5370d1ff82105fb7f26aa0658499c97d3ec78561e65b65724280244f281602541182b63470d2c8a98db22fbb4f91409c5c7c97da8c3bb8f97fbc5dbc
   languageName: node
   linkType: hard
 
@@ -239,7 +239,7 @@ __metadata:
   dependencies:
     "@octokit/rest": ^18.3.5
     "@types/bluebird": ^3.5.33
-    "@types/node": ^14.14.34
+    "@types/node": ^14.14.35
     "@types/shelljs": ^0.8.8
     "@vercel/node": ^1.9.1
     bluebird: ^3.7.2
@@ -248,7 +248,7 @@ __metadata:
     log4js: ^6.3.0
     shelljs: ^0.8.4
     typescript: ^4.2.3
-    zod: ^3.0.0-alpha.4
+    zod: ^3.0.0-alpha.30
   languageName: unknown
   linkType: soft
 
@@ -682,9 +682,9 @@ typescript@^4.2.3:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.0.0-alpha.4":
-  version: 3.0.0-alpha.4
-  resolution: "zod@npm:3.0.0-alpha.4"
-  checksum: ad79c89aa1a7f1f580b41b2374df2febc280b737fc493807e97b76659815f6b99e437b6876c4d3496c66f872fa698c88380e2f0cf0e744cee65995626987ec6e
+"zod@npm:^3.0.0-alpha.30":
+  version: 3.0.0-alpha.30
+  resolution: "zod@npm:3.0.0-alpha.30"
+  checksum: 1877eea4b9cdb6e9bfdf3428d8327919b496778017460b0ea5fff356d2bce24759b082107435904679d8dc7f6b8170520e4990f294d49432da6f47452b5795d7
   languageName: node
   linkType: hard

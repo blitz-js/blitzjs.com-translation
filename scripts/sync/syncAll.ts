@@ -5,23 +5,17 @@
  * runAll [command] [configfile] [langDir]
  * ```
  */
-import * as fs from "fs/promises"
+import fs from "fs/promises"
 import {map as mapAsync} from "bluebird"
 import * as shell from "shelljs"
 import {formatISO, subDays} from "date-fns"
 
-import syncOne from "./syncOne"
-import {CONFIG, getJSON, LangSchema, octokit} from "../_utils"
+import {CONFIG, octokit} from "../_utils"
 
 async function main() {
   const langFiles = await fs.readdir("langs")
-  const langs = await mapAsync(langFiles, async (file) => {
-    const data = await getJSON(`langs/${file}`)
-    return LangSchema.parse(data)
-  })
 
-  shell.mkdir("repos")
-  shell.cd("repos")
+  shell.mkdir("-p", "repos")
 
   let newCommits: boolean
   try {
@@ -41,7 +35,11 @@ async function main() {
     return
   }
 
-  await mapAsync(langs, syncOne, {concurrency: CONFIG.concurrency})
+  await mapAsync(
+    langFiles,
+    (langFile) => shell.exec(`node scripts/sync/syncOne.js ${langFile}`, {async: true}),
+    {concurrency: CONFIG.concurrency},
+  )
 }
 
 main()
