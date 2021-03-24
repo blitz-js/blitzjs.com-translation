@@ -1,6 +1,6 @@
 {
   "name": "Simplified Chinese",
   "code": "zh-hans",
-  "maintainers": ["linbudu599"],
+  "maintainers": ["hylerrix", "linbudu599"],
   "branchProtection": false
 }
