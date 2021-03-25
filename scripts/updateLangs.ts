@@ -23,6 +23,19 @@ const branchIsProtected = async (owner: string, repo: string, branch: string) =>
   }
 }
 
+const updateMaintainers = (body: string, maintainers: string[]) => {
+  const maintenersRegex = /(?<=<!-- MAINTAINERS-START -->)(.|\n)+(?=<!-- MAINTAINERS-END -->)/
+
+  if (maintainers.length === 0) {
+    return body.replace(maintenersRegex, "\n")
+  } else {
+    return body.replace(
+      maintenersRegex,
+      "\n" + maintainers.map((name) => `* @${name}`).join("\n") + "\n",
+    )
+  }
+}
+
 const activateBranchProtection = (owner: string, repo: string, branch: string) =>
   octokit.repos.updateBranchProtection({
     owner,
@@ -117,6 +130,23 @@ async function main() {
           )
         }
 
+        if (newMaintainers.length > 0 || removedMaintainers.length > 0) {
+          logger.info("Updating maintainers list...")
+          const {data: progressIssue} = await octokit.issues.get({
+            owner: org,
+            repo: newRepoName,
+            issue_number: 1,
+          })
+          if (progressIssue.body) {
+            await octokit.issues.update({
+              owner: org,
+              repo: newRepoName,
+              issue_number: 1,
+              body: updateMaintainers(progressIssue.body, maintainers),
+            })
+          }
+        }
+
         if (await branchIsProtected(org, newRepoName, defaultBranch)) {
           if (!branchProtection) {
             logger.info("Removing branch protection...")
@@ -157,8 +187,7 @@ async function main() {
 
         logger.info("Creating Progress Issue...")
         const rawBody = await fs.readFile("./docs/PROGRESS.template.md", {encoding: "utf-8"})
-        const maintainerList = maintainers.map((name) => `* @${name}`).join("\n")
-        const body = rawBody.replace("{MAINTAINERS}", maintainerList)
+        const body = updateMaintainers(rawBody, maintainers)
         await octokit.issues.create({
           owner: org,
           repo: newRepoName,

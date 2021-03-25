@@ -1,6 +1,7 @@
-## Maintainer List
+## Maintainers
 
-{MAINTAINERS}
+<!-- MAINTAINERS-START -->
+<!-- MAINTAINERS-END -->
 
 ## For New Translators
 
