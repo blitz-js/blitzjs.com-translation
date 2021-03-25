@@ -18,7 +18,7 @@ Please be prompt with your translations! If you find that you can't commit anymo
 
 When someone volunteers, edit this issue with the username of the volunteer, and with the PR. Ex:
 
-* [ ] Home Page (@juanm04) #1
+* [ ] Home Page (@blitzjs-bot) #1
 
 When PRs are merged, make sure to mark that page as completed!
 
@@ -29,6 +29,7 @@ To do before releasing as an "official" translation. **Please translate these pa
 * [ ] Home Page
 * [ ] Get Started
 * [ ] Tutorial
+* [ ] Languages
 * [ ] All other texts (footer, navbar, search popup, etc.)
 
 ### Introduction
@@ -57,6 +58,7 @@ To do before releasing as an "official" translation. **Please translate these pa
 * [ ] `<Head>`
 * [ ] `<Document>`
 * [ ] Preview Mode
+* [ ] Static HTML Export
 * [ ] Code Splitting
 * [ ] `getStaticProps` API
 * [ ] `getStaticPaths` API
@@ -71,6 +73,7 @@ To do before releasing as an "official" translation. **Please translate these pa
 * [ ] URL Params & Query
 * [ ] Router
 * [ ] API Routes
+* [ ] Shallow Routing
 
 ## Next Steps
 
@@ -90,10 +93,6 @@ These are the next most important translations, ordered by importance:
 * [ ] Use Queries
 * [ ] Mutation Resolvers
 * [ ] Use Mutations
-* [ ] In a React Component
-* [ ] Error Handling
-* [ ] Cache Invalidation
-* [ ] Optimistic Updates
 * [ ] Client Utilities
 * [ ] Server Utilities
 * [ ] `useQuery`
@@ -108,6 +107,7 @@ These are the next most important translations, ordered by importance:
 * [ ] Authorization & Security
 * [ ] Hooks & Utilities
 * [ ] Third Party Login w/Passport.js
+* [ ] How To Impersonate Other Users
 
 ### Backend Architecture
 
@@ -129,6 +129,7 @@ These are the next most important translations, ordered by importance:
 * [ ] How to Contribute
 * [ ] Being a Maintainer
 * [ ] Code of Conduct
+* [ ] Doc Translations
 
 ### Configuration
 
@@ -145,6 +146,7 @@ These are the next most important translations, ordered by importance:
 * [ ] `blitz dev`
 * [ ] `blitz start`
 * [ ] `blitz build`
+* [ ] `blitz export`
 * [ ] `blitz db`
 * [ ] `blitz prisma`
 * [ ] `blitz generate`
