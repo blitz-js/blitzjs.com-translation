@@ -24,7 +24,7 @@ const branchIsProtected = async (owner: string, repo: string, branch: string) =>
 }
 
 const updateMaintainers = (body: string, maintainers: string[]) => {
-  const maintenersRegex = /(?<=<!-- MAINTAINERS-START -->)(.|\n)+(?=<!-- MAINTAINERS-END -->)/
+  const maintenersRegex = /(?<=<!-- MAINTAINERS-START -->)[\s\S]+(?=<!-- MAINTAINERS-END -->)/
 
   if (maintainers.length === 0) {
     return body.replace(maintenersRegex, "\n")

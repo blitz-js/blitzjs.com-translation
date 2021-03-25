@@ -11,9 +11,10 @@
     "node": "14.x"
   },
   "scripts": {
-    "postinstall": "tsc",
+    "build": "tsc",
     "update-langs": "node -r dotenv/config scripts/updateLangs.js",
-    "sync-all": "node -r dotenv/config scripts/sync/syncAll.js"
+    "sync-all": "node -r dotenv/config scripts/sync/syncAll.js",
+    "postinstall": "yarn build"
   },
   "dependencies": {
     "@octokit/rest": "^18.3.5",
