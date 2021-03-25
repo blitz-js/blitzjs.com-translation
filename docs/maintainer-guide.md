@@ -18,9 +18,9 @@ As repo maintainers and members of the React community, your responsibilities ar
 
 Create a *glossary* of the translations of technical and React-specific terms. Put this in a highly visible location (the README or a pinned issue). For examples of glossaries, see:
 
-* Simplified Chinese: https://github.com/reactjs/zh-hans.reactjs.org/issues/2
-* Japanese: https://github.com/reactjs/ja.reactjs.org/wiki/%E8%A8%B3%E8%AA%9E%E3%81%AE%E7%B5%B1%E4%B8%80
-* Spanish: https://github.com/reactjs/es.reactjs.org/blob/master/TRANSLATION.md#common-translations
+* Dutch: https://github.com/blitz-js/nl.blitzjs.com/blob/main/TRANSLATION.md#woordenlijst
+* Japanese: https://github.com/blitz-js/ja.blitzjs.com/wiki/%E7%94%A8%E8%AA%9E%E9%9B%86
+* Spanish: https://github.com/blitz-js/es.blitzjs.com/wiki/Glosario
 
 Also, create a *style guide* to define additional rules to follow in translation. See the [universal style guide](/docs/style-guide.md) for rules that should apply to *all* translations.
 
@@ -32,7 +32,7 @@ Some pages (like the [tutorial](https://blitzjs.com/docs/tutorial)) are *very* l
 
 Decide how many reviewers you want to review each translated page before it can be merged in. If your team is small and busy, you may only be able to have one reviewer so that translators don't get blocked. If your team is bigger, consider having two reviewers so you have a stronger guarantee that the page is correct.
 
-Another useful tool is using GitHub tags to show what step in the review process a PR is in. Look at the [Brazilian Portuguese repo](https://github.com/reactjs/pt-BR.reactjs.org/pulls) to see a good example of a tag system.
+Another useful tool is using GitHub tags to show what step in the review process a PR is in.
 
 ### Integration tools
 
@@ -40,4 +40,4 @@ You are encouraged to use the integration tools of your choice to test and deplo
 
 ### Ask for help
 
-If you have a question that isn't addressed here, you can go to the `#translations` channel in the [Blitz Discord Server](https://discord.blitzjs.com) and ask your fellow translators for help!
+If you have a question that isn't addressed here, you can go to the `#lang-[your lang]` or `#contributor-website-docs` channel in the [Blitz Discord Server](https://discord.blitzjs.com) and ask your fellow translators for help!
