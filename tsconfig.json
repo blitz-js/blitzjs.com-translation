@@ -3,12 +3,13 @@
     "lib": ["es2020"],
     "module": "commonjs",
     "target": "es2020",
+    "outDir": "dist",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "strictNullChecks": true
   },
-  "include": ["scripts/**/*.ts"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules/"]
 }

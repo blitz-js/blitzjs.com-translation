@@ -20,6 +20,8 @@ jobs:
             langs/*.json
       - name: Install dependencies
         run: yarn
+      - name: Build scripts
+        run: yarn build
       - name: Run script
         run: yarn update-langs ${{ env.GIT_DIFF_FILTERED }}
         env:

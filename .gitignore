@@ -9,6 +9,6 @@
 .pnp.*
 yarn-error.log
 
-scripts/**/*.js
+dist/
 repos/
 repo/
