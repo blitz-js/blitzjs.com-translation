@@ -14,17 +14,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/core@npm:^3.2.3":
-  version: 3.2.5
-  resolution: "@octokit/core@npm:3.2.5"
+"@octokit/core@npm:^3.5.0":
+  version: 3.5.1
+  resolution: "@octokit/core@npm:3.5.1"
   dependencies:
     "@octokit/auth-token": ^2.4.4
     "@octokit/graphql": ^4.5.8
-    "@octokit/request": ^5.4.12
+    "@octokit/request": ^5.6.0
+    "@octokit/request-error": ^2.0.5
     "@octokit/types": ^6.0.3
-    before-after-hook: ^2.1.0
+    before-after-hook: ^2.2.0
     universal-user-agent: ^6.0.0
-  checksum: 509d224696a48c92b6182bcc03c0d7d4ba26eac30598300323411d2f8037de427930311244f1b9c446fc9916545db28b17d0812c1af5cf616fc5d2249416855e
+  checksum: 2967d97b43ee152068980f22258c8f32cc4f9f62cf627eb3640724fa0a8465421edb274fc9d1b2aa804081f3a3e902d36d0dc88cfce3115989ffb39d1a8ae4cd
   languageName: node
   linkType: hard
 
@@ -57,10 +58,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/openapi-types@npm:^5.3.2":
-  version: 5.3.2
-  resolution: "@octokit/openapi-types@npm:5.3.2"
-  checksum: 5c5f2f2f6ea26192072b408b3e5ce8087d4eb256addda5ebcd2e58a0a94af49e135482c0e15768ee2998c329ed178d8f491b5d229bb2f283dede2389b0bb20c9
+"@octokit/openapi-types@npm:^9.1.0":
+  version: 9.1.0
+  resolution: "@octokit/openapi-types@npm:9.1.0"
+  checksum: a7256328701499d81c2f262847e1add087631b6320ecfc0f6292ab6b56bcb905bb2049eb4814976083cdb95836ffc26b37ca59476b8ca5edc949f6756bcaea0e
   languageName: node
   linkType: hard
 
@@ -84,15 +85,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/plugin-rest-endpoint-methods@npm:4.13.5":
-  version: 4.13.5
-  resolution: "@octokit/plugin-rest-endpoint-methods@npm:4.13.5"
+"@octokit/plugin-rest-endpoint-methods@npm:5.5.0":
+  version: 5.5.0
+  resolution: "@octokit/plugin-rest-endpoint-methods@npm:5.5.0"
   dependencies:
-    "@octokit/types": ^6.12.2
+    "@octokit/types": ^6.21.0
     deprecation: ^2.3.1
   peerDependencies:
     "@octokit/core": ">=3"
-  checksum: 0c758acd10bb11da239a4f16c8d51b17623a170627064649e5a0a70e982549e0ef1268a2db0cf7d98c2122046648c9eff93296859301deaf82d198b0ab07ea3f
+  checksum: b476030a4c94056e3bb1b56ac8ae55bbc07b8163db3d6b0a1e874272ea5894d2475ae328cdd2b9a719159d9bd44fd6bb6739c388e4ed8a2211a9ce03cfb013c2
   languageName: node
   linkType: hard
 
@@ -107,7 +108,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/request@npm:^5.3.0, @octokit/request@npm:^5.4.12":
+"@octokit/request-error@npm:^2.0.5, @octokit/request-error@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@octokit/request-error@npm:2.1.0"
+  dependencies:
+    "@octokit/types": ^6.0.3
+    deprecation: ^2.0.0
+    once: ^1.4.0
+  checksum: 0fdf0075bce449f07a376eae9e623f10859943ffcb8db4a97e5052ea09a16a9fc5c009153f750efc6ba3b0ca5f068b975b0d9eca180405533a6af78d318001fd
+  languageName: node
+  linkType: hard
+
+"@octokit/request@npm:^5.3.0":
   version: 5.4.14
   resolution: "@octokit/request@npm:5.4.14"
   dependencies:
@@ -123,15 +135,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/rest@npm:^18.3.5":
-  version: 18.3.5
-  resolution: "@octokit/rest@npm:18.3.5"
+"@octokit/request@npm:^5.6.0":
+  version: 5.6.0
+  resolution: "@octokit/request@npm:5.6.0"
   dependencies:
-    "@octokit/core": ^3.2.3
+    "@octokit/endpoint": ^6.0.1
+    "@octokit/request-error": ^2.1.0
+    "@octokit/types": ^6.16.1
+    is-plain-object: ^5.0.0
+    node-fetch: ^2.6.1
+    universal-user-agent: ^6.0.0
+  checksum: d9a6312f53292ee1b7c73e88fac1b26870bb524fcc8d80d3e5fc0b3d87d941e0728ba6ae2e1d8ac292a23ccaa73cfb27dbeb1cef73e185c24b97231f982d06a1
+  languageName: node
+  linkType: hard
+
+"@octokit/rest@npm:^18.7.0":
+  version: 18.7.0
+  resolution: "@octokit/rest@npm:18.7.0"
+  dependencies:
+    "@octokit/core": ^3.5.0
     "@octokit/plugin-paginate-rest": ^2.6.2
     "@octokit/plugin-request-log": ^1.0.2
-    "@octokit/plugin-rest-endpoint-methods": 4.13.5
-  checksum: 833b054c222524cd144b999d4c631f8a4457f5835c2e8aae7da663717d76e46265211ceaec73deb50149a07dd5deb25fadd148a04f830d91491268f2288b69c3
+    "@octokit/plugin-rest-endpoint-methods": 5.5.0
+  checksum: dbdd9ba5bde38e400a2a7c855871e538b8c4d32a44e5fb47904a4fb419d97d38d344920378f65b02da05d23f2482b8c4ab5dd59fced55c9cac2c151955d510ef
   languageName: node
   linkType: hard
 
@@ -144,19 +170,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/types@npm:^6.12.2":
-  version: 6.12.2
-  resolution: "@octokit/types@npm:6.12.2"
+"@octokit/types@npm:^6.16.1, @octokit/types@npm:^6.21.0":
+  version: 6.21.0
+  resolution: "@octokit/types@npm:6.21.0"
   dependencies:
-    "@octokit/openapi-types": ^5.3.2
-  checksum: d96bb9fae7f71c849f952432ffbcecc5ce2d00c18044bfb8d993625b9c9852ad6a672f2c144ab198f4e6a3618c744bdc833158b7c02e810659b006736ab73ed5
+    "@octokit/openapi-types": ^9.1.0
+  checksum: 428ae3acb78445b9d12d93401796f1ae0b64f9a8ee03b6264e4a03e08d04bf91f4d4d49b4802d12b21b1c28fea499e7fd8b8315db2ee7860642e22f29ace7693
   languageName: node
   linkType: hard
 
-"@types/bluebird@npm:^3.5.33":
-  version: 3.5.33
-  resolution: "@types/bluebird@npm:3.5.33"
-  checksum: 45f7adeec6e656501f5b2127d5cc1538d3ae497d06bfa00d8d7f51eb2aa482267b3b4868ac1c75fc84acfad86d2c0d4de8af535cf725156f222d679df9694aff
+"@types/bluebird@npm:^3.5.36":
+  version: 3.5.36
+  resolution: "@types/bluebird@npm:3.5.36"
+  checksum: 5821da87dd33c1f5866f5b8faa058a05eeccb05465cb0befaf4b6141fc6c9dbb6657abfbdc7198d25612df073ba30a7bb41f11de69826859a7e8727693180673
   languageName: node
   linkType: hard
 
@@ -184,31 +210,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^14.14.35":
-  version: 14.14.35
-  resolution: "@types/node@npm:14.14.35"
-  checksum: 0f6320bf5370d1ff82105fb7f26aa0658499c97d3ec78561e65b65724280244f281602541182b63470d2c8a98db22fbb4f91409c5c7c97da8c3bb8f97fbc5dbc
+"@types/node@npm:^16.4.1":
+  version: 16.4.1
+  resolution: "@types/node@npm:16.4.1"
+  checksum: 8b9fda74322631febbf084e3c7a26b799a3a1b8f45d6bbaedfb8943c7b3eb743aa2e41c04de6f5f87f63c99451f3ed0b37822614cbd42ed55c8c9c8f9462d231
   languageName: node
   linkType: hard
 
-"@types/shelljs@npm:^0.8.8":
-  version: 0.8.8
-  resolution: "@types/shelljs@npm:0.8.8"
+"@types/shelljs@npm:^0.8.9":
+  version: 0.8.9
+  resolution: "@types/shelljs@npm:0.8.9"
   dependencies:
     "@types/glob": "*"
     "@types/node": "*"
-  checksum: faf9d4aa31e83c46d5451221e614b437b11bfc289208d6016aab7181af284cef38d7a009a16fa73abe9bc578e0f206d7032023f9282edc7f6601c62c4a6c26ed
+  checksum: 7f92ec7ac0cb7d4adf9e019612f20e5b218cb5f0a7e178cb575bd41a893b32314a4a76b495359305898a02b6584310c9cc4a11cccf0ea886e2e08fb07efe6fae
   languageName: node
   linkType: hard
 
-"@vercel/node@npm:^1.9.1":
-  version: 1.9.1
-  resolution: "@vercel/node@npm:1.9.1"
+"@vercel/node@npm:^1.11.1":
+  version: 1.11.1
+  resolution: "@vercel/node@npm:1.11.1"
   dependencies:
     "@types/node": "*"
     ts-node: 8.9.1
     typescript: 3.9.3
-  checksum: 4daae2b5ee95ba083372b2f1f40e49c55d267b2b0b1cf0b86a16f218728cc50b1b0554e7747d951bbf220b4a47d606c9ccc4e9d5a007ceb61346eada5ef4f85c
+  checksum: d2e2046b658516275031590cc2729ac5778f891d2ba827b2202ae6f349ff9a545ab943a75b80b3801c51544bd73da845b8e2c2c62e39ba1b281e64d93afd9551
   languageName: node
   linkType: hard
 
@@ -226,10 +252,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"before-after-hook@npm:^2.1.0":
-  version: 2.1.1
-  resolution: "before-after-hook@npm:2.1.1"
-  checksum: 07b84cf850593a22e8d333e2ff3fe9af8d6f6cb661b2a81a88fcd25afc8360413f513d5b7d76dfe877f8d5fe3fa8f8c533d26961955b335b4977ba73692b32e5
+"before-after-hook@npm:^2.2.0":
+  version: 2.2.2
+  resolution: "before-after-hook@npm:2.2.2"
+  checksum: 06dd8fc2a1c5c4a16f21d725a7b7d05814d94c4a0a003abe923bb509b3863638efc8ab89515192046dc8d29bbc5dbd3f75fe47a2d3bffbffae427fc976c142bb
   languageName: node
   linkType: hard
 
@@ -237,18 +263,18 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "blitzjs.com-translation@workspace:."
   dependencies:
-    "@octokit/rest": ^18.3.5
-    "@types/bluebird": ^3.5.33
-    "@types/node": ^14.14.35
-    "@types/shelljs": ^0.8.8
-    "@vercel/node": ^1.9.1
+    "@octokit/rest": ^18.7.0
+    "@types/bluebird": ^3.5.36
+    "@types/node": ^16.4.1
+    "@types/shelljs": ^0.8.9
+    "@vercel/node": ^1.11.1
     bluebird: ^3.7.2
-    date-fns: ^2.19.0
-    dotenv: ^8.2.0
+    date-fns: ^2.22.1
+    dotenv: ^10.0.0
     log4js: ^6.3.0
     shelljs: ^0.8.4
-    typescript: ^4.2.3
-    zod: ^3.0.0-alpha.30
+    typescript: ^4.3.5
+    zod: ^3.5.1
   languageName: unknown
   linkType: soft
 
@@ -283,10 +309,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:^2.19.0":
-  version: 2.19.0
-  resolution: "date-fns@npm:2.19.0"
-  checksum: 99ec34199c3a61cdb7fd27dcd68dd3c0c949ddfc34aa1daba9a6b2e0b5381bf42d8955d28ec2770f72eee429f5e7ab10fadba7b69108379d2545f003461d04f7
+"date-fns@npm:^2.22.1":
+  version: 2.22.1
+  resolution: "date-fns@npm:2.22.1"
+  checksum: a89dc6cdf3929b3f0d54d129a3c288df995fc3e6c8099dacc215e5404b4950fc8551d11a58968dfd3b8d576d0c5e637072f615e8f9c3e47d82c81e3952007d5b
   languageName: node
   linkType: hard
 
@@ -330,10 +356,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:^8.2.0":
-  version: 8.2.0
-  resolution: "dotenv@npm:8.2.0"
-  checksum: 16cb89cbd7b98b053899b8aba8c5044c8fb61a2db8a81fe70360b75035fce5fed53bd7a34d772be717d0880c0321122a4c09423f518025e1b52d96791521b1a7
+"dotenv@npm:^10.0.0":
+  version: 10.0.0
+  resolution: "dotenv@npm:10.0.0"
+  checksum: 9c45712e213de63bdb646b8e5344749b7566e25a67bbd3f03711d54e40eff10066c1f23eff0081d0949fda7c8efcc6e9e8bf18d0f023a8274f55f5d5f97bb6db
   languageName: node
   linkType: hard
 
@@ -624,19 +650,19 @@ typescript@3.9.3:
   languageName: node
   linkType: hard
 
-typescript@^4.2.3:
-  version: 4.2.3
-  resolution: "typescript@npm:4.2.3"
+typescript@^4.3.5:
+  version: 4.3.5
+  resolution: "typescript@npm:4.3.5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 06e8470f317db6f5e2fce809b20eb84a67a7d8179057abff36e5427bd1b891bd08e54581ff81f0fa36aef9b6d1eb0f54eaf6e2643c6dbd4e37a0adcc41eed256
+  checksum: d9a8e78d72dd19896e6bfa73ab2a0fcea6eca2700d1d6e7c33f67a970af54a3e0fed8f715a8c4e6a0ff7fc0995067b394b2003518ab0aa84cd396377e54b760c
   languageName: node
   linkType: hard
 
 "typescript@patch:typescript@3.9.3#builtin<compat/typescript>":
   version: 3.9.3
-  resolution: "typescript@patch:typescript@npm%3A3.9.3#builtin<compat/typescript>::version=3.9.3&hash=a45b0e"
+  resolution: "typescript@patch:typescript@npm%3A3.9.3#builtin<compat/typescript>::version=3.9.3&hash=ddfc1b"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
@@ -644,13 +670,13 @@ typescript@^4.2.3:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.2.3#builtin<compat/typescript>":
-  version: 4.2.3
-  resolution: "typescript@patch:typescript@npm%3A4.2.3#builtin<compat/typescript>::version=4.2.3&hash=a45b0e"
+"typescript@patch:typescript@^4.3.5#builtin<compat/typescript>":
+  version: 4.3.5
+  resolution: "typescript@patch:typescript@npm%3A4.3.5#builtin<compat/typescript>::version=4.3.5&hash=ddfc1b"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: a8956044aabf730699bcc3c2475efdd3f35e509329325cf60b4989761d4c2188e2c474183e2cf92b8c201fcf976814a5a16f144508b2a832643c4f972d0ab803
+  checksum: 7f0b8343f71ecac18095be1476b398aca420ab60dc207cc1efe078f381eef5527b80a518297720257114cdbda65612f8839e4b63e85dc95e67ac5cbbade8bdf0
   languageName: node
   linkType: hard
 
@@ -682,9 +708,9 @@ typescript@^4.2.3:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.0.0-alpha.30":
-  version: 3.0.0-alpha.30
-  resolution: "zod@npm:3.0.0-alpha.30"
-  checksum: 1877eea4b9cdb6e9bfdf3428d8327919b496778017460b0ea5fff356d2bce24759b082107435904679d8dc7f6b8170520e4990f294d49432da6f47452b5795d7
+"zod@npm:^3.5.1":
+  version: 3.5.1
+  resolution: "zod@npm:3.5.1"
+  checksum: c9950b5163bd63b8471a6fca61bc8d6779f7f11ff2d980b59dc5936e4da7ace1931e1420770f62bc23b6e8a132bfe7f695e43c27ac560d427262fc90e1e2c2b2
   languageName: node
   linkType: hard

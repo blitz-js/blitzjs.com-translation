@@ -121,7 +121,7 @@ async function main() {
     await octokit.pulls.requestReviewers({
       owner: org,
       repo: transRepoName,
-      number: newPR.number,
+      pull_number: newPR.number,
       reviewers: getRandomSubset(maintainers, 3),
     })
 
