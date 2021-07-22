@@ -31,10 +31,12 @@ To do before releasing as an "official" translation. **Please translate these pa
 * [ ] Get Started
 * [ ] Tutorial
 * [ ] Languages
+* [ ] Showcase
 * [ ] All other texts (footer, navbar, search popup, etc.)
 
 ### Introduction
 
+* [ ] Learning Path
 * [ ] What is Next.js?
 * [ ] Why Blitz instead of Next.js?
 * [ ] Tradeoffs
@@ -44,17 +46,20 @@ To do before releasing as an "official" translation. **Please translate these pa
 
 * [ ] File Structure
 * [ ] `<App>`
-* [ ] Built-In CSS Support
-* [ ] Image Optimization
-* [ ] Static Files & Images
+* [ ] `<Image>`
+* [ ] `<Script>`
+* [ ] CSS
+* [ ] Font Optimization
+* [ ] Static Files
 * [ ] Environment Variables
 * [ ] Error Handling
+* [ ] `<ErrorBoundary>`
 * [ ] Testing
+* [ ] Utilities
 
 ### Pages
 
 * [ ] Pages
-* [ ] Redirects
 * [ ] Error Pages
 * [ ] `<Head>`
 * [ ] `<Document>`
@@ -73,8 +78,12 @@ To do before releasing as an "official" translation. **Please translate these pa
 * [ ] `<Link>`
 * [ ] URL Params & Query
 * [ ] Router
+* [ ] Redirects
+* [ ] Rewrites
+* [ ] HTTP Headers
 * [ ] API Routes
 * [ ] Shallow Routing
+* [ ] Route Manifest
 
 ## Next Steps
 
@@ -112,15 +121,18 @@ These are the next most important translations, ordered by importance:
 
 ### Backend Architecture
 
+* [ ] Multitenancy
 * [ ] Background Processing with Quirrel
 * [ ] HTTP Middleware
 * [ ] Custom Server
+* [ ] Security Headers
 
 ### Deploying to Production
 
 * [ ] To Render.com
 * [ ] To Vercel
 * [ ] To Heroku
+* [ ] To Railway
 
 ### Community
 
@@ -137,6 +149,9 @@ These are the next most important translations, ordered by importance:
 * [ ] `blitz.config.js`
 * [ ] Webpack Config
 * [ ] PostCSS Config
+* [ ] ESLint Config
+* [ ] Husky Config
+* [ ] Prettier Config
 * [ ] RPC Specification
 * [ ] Measuring Performance
 
@@ -151,6 +166,7 @@ These are the next most important translations, ordered by importance:
 * [ ] `blitz db`
 * [ ] `blitz prisma`
 * [ ] `blitz generate`
+* [ ] `blitz codegen`
 * [ ] `blitz console`
 * [ ] `blitz install`
 * [ ] `blitz autocomplete`
