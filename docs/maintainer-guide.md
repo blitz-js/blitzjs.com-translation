@@ -4,7 +4,7 @@ This document lists the responsibilities and resources available to maintainers 
 
 ## Maintainer Responsibilities
 
-As repo maintainers and members of the React community, your responsibilities are as follows:
+As repo maintainers and members of the Blitz community, your responsibilities are as follows:
 
 1. Keep the [Progress issue](/docs/PROGRESS.template.md) up to date as people volunteer to translate pages.
 2. Review pull requests made by contributors promptly.
